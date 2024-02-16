@@ -7,4 +7,8 @@ This is an Arch Linux package for
 makepkg -si
 ```
 
-Now change options as needed in `/etc/udp-obfuscat/config.env`.
+Now change options as needed in `/etc/udp-obfuscat/config.env` and start service:
+
+```bash
+sudo systemctl start udp-obfuscat.service
+```
