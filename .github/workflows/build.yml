@@ -1,0 +1,36 @@
+name: Buuld and upload artifacts
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: archlinux:latest
+
+    steps:
+      - name: Install dependencies
+        run: |
+          pacman -Suy --noconfirm --needed base-devel
+
+      - name: Create non root user
+        run: |
+          useradd --create-home builder
+          echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Change ownership
+        run: chown -R builder:builder .
+
+      - name: Build Arch Linux package
+        run: sudo -u builder makepkg --syncdeps --noconfirm
+
+      - name: Upload package
+        uses: actions/upload-artifact@v4
+        with:
+          name: udp-obfuscat
+          path: '*.zst'

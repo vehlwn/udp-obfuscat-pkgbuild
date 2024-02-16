@@ -1,0 +1,37 @@
+[Unit]
+Description = UDP proxy with obfuscation
+Wants = network-online.target
+After = network-online.target
+
+[Service]
+User = udp-obfuscat
+Group = udp-obfuscat
+EnvironmentFile = /etc/udp-obfuscat/config.env
+ExecStart = /usr/bin/udp-obfuscat
+
+Restart = always
+RestartSec = 5
+
+# Hardening
+LockPersonality = true
+MemoryDenyWriteExecute = true
+NoNewPrivileges = true
+PrivateDevices = true
+PrivateTmp = true
+ProtectClock = true
+ProtectControlGroups = true
+ProtectHome = true
+ProtectHostname = true
+ProtectKernelLogs = true
+ProtectKernelModules = true
+ProtectKernelTunables = true
+ProtectProc = invisible
+ProtectSystem = strict
+RemoveIPC = true
+RestrictAddressFamilies = AF_INET AF_INET6
+RestrictNamespaces = true
+RestrictRealtime = true
+RestrictSUIDSGID = true
+
+[Install]
+WantedBy = multi-user.target
