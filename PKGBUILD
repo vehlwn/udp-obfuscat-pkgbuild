@@ -1,5 +1,5 @@
 pkgname=udp-obfuscat
-pkgver=1.1.0
+pkgver=2.0.1
 pkgrel=1
 pkgdesc="UDP proxy with obfuscation"
 arch=('x86_64')
@@ -13,7 +13,7 @@ source=(
 )
 sha256sums=(
     SKIP
-    556bf05d6e82095e4872a6e098d90a48b353b951c43554057bcf866836e18b01
+    9ca280084c304114944eda037a8786d2a414fd1a9056a81077cf5968bdbb399c
     04e20ed441d2512d054f93fd84a125f2cde493a69b6b82466b709a9f4692db0d
 )
 
@@ -41,5 +41,5 @@ package() {
 
     cd "$pkgname-$pkgver"
     install -Dm755 "target/release/$pkgname" "$pkgdir/usr/bin/$pkgname"
-    install -Dm644 config-example.env "$pkgdir/etc/$pkgname/config.env"
+    install -Dm644 config-example.toml "$pkgdir/etc/$pkgname/config.toml"
 }
