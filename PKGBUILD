@@ -1,6 +1,6 @@
 pkgname=udp-obfuscat
 pkgver=2.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="UDP proxy with obfuscation"
 arch=('x86_64')
 url="https://github.com/vehlwn/udp-obfuscat"
@@ -16,6 +16,7 @@ sha256sums=(
     1fe8be85187d0de95c18684bbe72f6026a14800ab161e882bfb54c8c3b9bbfad
     04e20ed441d2512d054f93fd84a125f2cde493a69b6b82466b709a9f4692db0d
 )
+backup=(etc/$pkgname/config.toml)
 
 prepare() {
     export RUSTUP_TOOLCHAIN=stable
