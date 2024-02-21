@@ -1,6 +1,6 @@
 pkgname=udp-obfuscat
 pkgver=2.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="UDP proxy with obfuscation"
 arch=('x86_64')
 url="https://github.com/vehlwn/udp-obfuscat"
@@ -13,7 +13,7 @@ source=(
 )
 sha256sums=(
     SKIP
-    9ca280084c304114944eda037a8786d2a414fd1a9056a81077cf5968bdbb399c
+    1fe8be85187d0de95c18684bbe72f6026a14800ab161e882bfb54c8c3b9bbfad
     04e20ed441d2512d054f93fd84a125f2cde493a69b6b82466b709a9f4692db0d
 )
 

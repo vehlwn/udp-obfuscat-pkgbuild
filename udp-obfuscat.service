@@ -4,8 +4,6 @@ Wants = network-online.target
 After = network-online.target
 
 [Service]
-User = udp-obfuscat
-Group = udp-obfuscat
 ExecStart = /usr/bin/udp-obfuscat -c /etc/udp-obfuscat/config.toml
 
 Restart = always
