@@ -1,5 +1,5 @@
 pkgname=udp-obfuscat
-pkgver=2.2.2
+pkgver=2.3.1
 pkgrel=1
 pkgdesc="UDP proxy with obfuscation"
 arch=('x86_64')
