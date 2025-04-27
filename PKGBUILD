@@ -1,13 +1,13 @@
 pkgname=udp-obfuscat
-pkgver=2.3.1
+pkgver=2.3.2
 pkgrel=1
 pkgdesc="UDP proxy with obfuscation"
 arch=('x86_64')
 url="https://github.com/vehlwn/udp-obfuscat"
-license=(ISC)
+license=(MIT)
 makedepends=(rust)
 source=(
-    "$pkgname-$pkgver.tar.gz::https://github.com/vehlwn/$pkgname/archive/$pkgver.tar.gz"
+    "$pkgname-$pkgver.tar.gz::https://github.com/vehlwn/$pkgname/archive/v$pkgver.tar.gz"
     udp-obfuscat.service
     sysusers.d
 )
