@@ -1,2 +1,1 @@
-u udp-obfuscat - -
-g udp-obfuscat - -
+u! udp-obfuscat - -
