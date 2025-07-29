@@ -1,6 +1,6 @@
 pkgname=udp-obfuscat
-pkgver=2.3.2
-pkgrel=2
+pkgver=2.3.3
+pkgrel=1
 pkgdesc="UDP proxy with obfuscation"
 arch=('x86_64')
 url="https://github.com/vehlwn/udp-obfuscat"
